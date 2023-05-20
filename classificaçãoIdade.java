@@ -3,10 +3,9 @@ import java.util.Scanner;
 public class PedidoComRepetição {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         String nome;
         int codigo, quantidade;
-
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Informe seu nome: ");
         nome = scanner.nextLine();
