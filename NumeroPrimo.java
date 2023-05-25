@@ -3,19 +3,25 @@ import java.util.Scanner;
 class NumeroPrimo {
     public static void main(String[] args) {
         int numero;
-        int contador = 0;
+        boolean primo = true;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Insira um número inteiro para descobrir se é primo: ");
         numero = scanner.nextInt();
+        while (numero < 0) {
+            System.out.println("O valor informado não é positivo. informe um valor inteiro e positivo: ");
+            numero = scanner.nextInt();
+        }
 
-        for (int x = 1; x <= numero; x++) {
+
+        for (int x = 2; x <= numero - 1; x++) {
             if (numero % x == 0) {
-                contador += 1;
+                primo = false;
+                break;
             }
         }
 
-        if (contador == 2 || numero == 1) {
+        if (primo == true) {
             System.out.println("O número é primo.");
         } else {
             System.out.println("O número não é primo.");
