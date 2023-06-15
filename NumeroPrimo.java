@@ -20,7 +20,6 @@ class NumeroPrimo {
                 break;
             }
         }
-
         if (primo == true) {
             System.out.println("O número é primo.");
         } else {
